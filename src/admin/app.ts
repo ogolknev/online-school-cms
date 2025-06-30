@@ -1,4 +1,4 @@
-import type { StrapiApp } from '@strapi/strapi/admin';
+import type { StrapiApp } from "@strapi/strapi/admin";
 
 export default {
   config: {
@@ -20,7 +20,7 @@ export default {
       // 'pl',
       // 'pt-BR',
       // 'pt',
-      // 'ru',
+      "ru",
       // 'sk',
       // 'sv',
       // 'th',
@@ -31,7 +31,5 @@ export default {
       // 'zh',
     ],
   },
-  bootstrap(app: StrapiApp) {
-    console.log(app);
-  },
+  bootstrap() {},
 };
