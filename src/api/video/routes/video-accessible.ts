@@ -1,6 +1,6 @@
 import Strapi from "@strapi/strapi";
 
-const router = {
+const router: Strapi.Core.Router = {
   type: "content-api",
   routes: [
     {
@@ -9,7 +9,6 @@ const router = {
       handler: "video.findAccessible",
       info: {},
       config: {
-        description: "Get all videos accessible by user",
       },
     },
   ],

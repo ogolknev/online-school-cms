@@ -8,11 +8,13 @@ export default factories.createCoreController(
   "api::video.video",
   ({ strapi }) => ({
     async findOneUrl(ctx) {
+      const { populate } = ctx.query;
+
       const video = await strapi
         .documents("api::video.video")
-        .findOne({ documentId: ctx.params.id });
+        .findOne({ documentId: ctx.params.id, populate });
 
-      return { url: video.url };
+      return video;
     },
     async findAccessible(ctx) {
       const { populate } = ctx.query;
@@ -33,5 +35,5 @@ export default factories.createCoreController(
 
       return { videos };
     },
-  }),
+  })
 );

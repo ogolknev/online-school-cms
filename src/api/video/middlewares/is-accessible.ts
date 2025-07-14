@@ -6,7 +6,7 @@ const isAccessible: Strapi.Core.MiddlewareFactory = (config, { strapi }) => {
 
     const nextData = next();
 
-    console.log({ user, nextData });
+    console.log({ user });
 
     return nextData;
   };
